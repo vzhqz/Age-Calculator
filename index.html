@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'></script>
+</head>
+<body>
+    <h1>Age Calculator<span>(Advanced)</span></h1>
+    <div>
+        <label for="userAge">Enter your age</label>
+        <div class="container">
+            <input type="number" placeholder="Age" id="userAge" min="1">
+        </div>
+    </div>
+    <button onclick="calculateAge()">Calculate!</button>
+    <img id="loadingGif" src="loading.gif" style="display: none;" alt="LOADING!!!!">
+    <p id="resultText"></p>
+    <script src="script.js"></script>
+</body>
+</html>
