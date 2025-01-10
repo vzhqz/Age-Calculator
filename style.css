@@ -1,0 +1,107 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 40px;
+}
+
+span {
+    display: block;
+    font-size: .7em;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+div {
+    text-align: left;
+}
+
+label {
+    font-size: 1.3em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#userAge {
+    width: 15em;
+    font-size: 1.15em;
+    padding: 10px 10px;
+    border-radius: 8px;
+    border: none;   
+    outline: none;
+    border: 1px solid rgba(157, 35, 209, 0.89);
+}
+.container {
+    position: relative;
+}
+
+@property --angle {
+    Syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.container::after, .container::before {
+    content: '';
+    position: absolute;
+    height: 110%;
+    width: 102%;
+    border-radius: 8px;
+    background-image: conic-gradient(from var(--angle), transparent 20%, rgba(157, 35, 209, 0.89));
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    animation: spin 2s linear infinite;
+}
+
+.container::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+button {
+    margin: 30px 0;
+    font-size: 1.15em;
+    padding: 7px 10px;
+    border-radius: 4px;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #dddddd;
+}
+
+button:active {
+    opacity: .7;
+}
+
+#resultText {
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+#ageStatus {
+    font-size: 1.1em;
+    font-weight: 100;
+}
