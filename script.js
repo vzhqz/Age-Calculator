@@ -9,7 +9,7 @@ function calculateAge() {
     if(age.value === "") {
         setTimeout(() => {
             gif.style.display = "none";
-            result.innerHTML = "You can't leave the input field empty <strong>lil nigga</strong>";
+            result.innerHTML = "Enter a valid age!";
         }, 3000);
     } else {
         setTimeout(() => {
