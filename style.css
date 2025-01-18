@@ -105,3 +105,22 @@ button:active {
     font-size: 1.1em;
     font-weight: 100;
 }
+
+#loader {
+    height: 100px;
+    width: 100px;
+    border: 10px solid #ccc;
+    border-top: 10px solid rgb(26, 114, 255);
+    border-radius: 50%;
+    animation: LoaderSpin 1s linear infinite;
+    display: none;
+}
+
+@keyframes LoaderSpin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
